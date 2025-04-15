@@ -6,8 +6,8 @@ class DigiKishanChatBot:
     def __init__(self):
         
         load_dotenv()
-        self.api_key = os.getenv('GOOGLE_API_KEY')
-        genai.configure(api_key=self.api_key)
+        self.api_key = os.getenv('GOOGLE_API_KEY')  # change here os.getenv("you env from .env file")
+        genai.configure(api_key=self.api_key)  # natraw direct ya key rakhdida hunxa self.api_key mah genai ko  mathi ko necessary xaina
         self.model = genai.GenerativeModel(
             model_name="gemini-1.5-pro",
             safety_settings=[
